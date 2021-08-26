@@ -21,6 +21,21 @@
   }
 }
 
+@media (min-width: 1280px) {
+  :root {
+    --gutter-x: 8px;
+  }
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1004px;
+    --bs-gutter-x: var(--gutter-x);
+  }
+}
+
 .row {
   --bs-gutter-x: calc(var(--gutter-x) * 2);
 }
@@ -107,13 +122,12 @@
 }
 
 .accordion-body .row {
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
 }
-.accordion-body .row::-webkit-scrollbar { 
-    display: none;  /* Safari and Chrome */
+.accordion-body .row::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
-
 
 .accordion-body .col .img-container {
   height: 0;
