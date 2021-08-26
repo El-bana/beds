@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- required meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- font open sans link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- bootstrap stylesheet -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <!-- our own stylesheet -->
+    <link rel="stylesheet" href="styles/style.css" />
+    <!-- page title -->
+    <title>Make Your Own</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+          <!-- image -->
+        <div class="col-7 position-relative left-side-image">
+          <img
+            src="./assets/bed.png"
+            alt="bed"
+            class="img-fluid main-bed-image"
+          />
+          <!-- image modal fullscreen -->
+          <div
+            class="modal fade"
+            id="imageModal"
+            tabindex="-1"
+            aria-labelledby="imageModal"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-body d-flex justify-content-center">
+                  <img
+                    src="./assets/bed.png"
+                    alt="bed"
+                    class="img-fluid main-bed-image"
+                  />
+                  <button
+                    type="button"
+                    class="p-0 main-btn rounded-circle exit-btn"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <img
+                      class="exit-icon"
+                      src="./assets/Icon material-close.png"
+                      alt="close"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- image modal fullscreen -->
+          <button
+            class="p-0 main-btn rounded-circle max-btn"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+          >
+            <img
+              class="max-icon"
+              src="./assets/Icon feather-maximize.png"
+              alt="maximize"
+            />
+          </button>
+        </div>
+        <!-- End image -->
+        <!-- Accordion -->
+        <div class="col-5 accordion-menu">
+            <div class="accordion" id="accordionMenu">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="bedBaseHeading">
+                    <button class="accordion-button text-primary fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bedBaseCollapse" aria-expanded="true" aria-controls="bedBaseCollapse">
+                        Select a bed base
+                    </button>
+                  </h2>
+                  <div id="bedBaseCollapse" class="accordion-collapse collapse" aria-labelledby="bedBaseHeading" data-bs-parent="#accordionMenu">
+                    <div class="accordion-body">
+                      <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headsetHeading">
+                    <button class="accordion-button text-primary fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#headsetCollapse" aria-expanded="false" aria-controls="headsetCollapse">
+                    Select a headset
+                    </button>
+                  </h2>
+                  <div id="headsetCollapse" class="accordion-collapse collapse" aria-labelledby="headsetHeading" data-bs-parent="#accordionMenu">
+                    <div class="accordion-body">
+                      <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="mattressesHeading">
+                    <button class="accordion-button text-primary fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mattressesCollapse" aria-expanded="false" aria-controls="mattressesCollapse">
+                        Select a mattresses
+                    </button>
+                  </h2>
+                  <div id="mattressesCollapse" class="accordion-collapse collapse" aria-labelledby="mattressesHeading" data-bs-parent="#accordionMenu">
+                    <div class="accordion-body">
+                      <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./scripts/main.js"></script>
+    <!-- bootstrap javascript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

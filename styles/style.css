@@ -1,0 +1,106 @@
+/* bootstrap variables */
+
+:root {
+  --bs-body-font-family: "Open Sans", sans-serif;
+  --bs-primary: #092746;
+  --bs-primary-rgb: 9, 39, 70;
+  --bs-secondary: #b6925f;
+  --bs-secondary-rgb: 182, 146, 95;
+  --gutter-x: 20px;
+}
+
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1640px;
+  }
+}
+
+body {
+  --bs-gutter-x: var(--gutter-x);
+}
+
+.row {
+  --bs-gutter-x: calc(var(--gutter-x) * 2);
+}
+
+/* our css */
+
+.main-btn {
+  background-color: rgba(var(--bs-secondary-rgb), 0.3);
+  border: none;
+  width: 65px;
+  height: 65px;
+}
+
+.max-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0;
+  transition: all ease-in 0.3s;
+}
+
+.exit-btn {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+
+.exit-icon {
+  width: 21;
+  height: auto;
+}
+
+.max-icon {
+  width: 27px;
+  height: auto;
+}
+
+.left-side-image:hover .max-btn {
+  opacity: 1;
+}
+
+.modal .modal-dialog .main-bed-image {
+  object-fit: contain;
+}
+
+.col-5.accordion-menu {
+  margin-top: 100px;
+}
+
+/* accordion */
+
+.accordion-item {
+  margin-bottom: 10px;
+  border: none;
+  background-color: #fff;
+}
+
+.accordion-item .accordion-button {
+  border-radius: 0.5rem !important;
+  background-color: #d6d3ce;
+}
+
+.accordion-item:not(:first-of-type) {
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.accordion-button::after {
+  background-image: url(../assets/Icon\ ionic-ios-arrow-dropright-circle.png);
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url(../assets/Icon\ ionic-ios-arrow-dropright-circle.png);
+  transform: rotate(-90deg);
+}
+
+
+.accordion-button:focus {
+    border-color: unset;
+    box-shadow: none;
+}
