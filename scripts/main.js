@@ -1,4 +1,4 @@
-const slider = document.querySelectorAll(".accordion-body");
+const slider = document.querySelectorAll(".accordion-carousel-container");
 let isDown = false;
 let startX;
 let scrollLeft;
@@ -25,15 +25,32 @@ slider.forEach((slider) => {
 });
 
 
+
+// accordion functionality
+
+const show = (item) => {
+  item.classList.remove('d-none')
+}
+
+const hide = (item) => {
+  item.classList.add('d-none')
+}
+
+
+
 let items = document.querySelectorAll('.accordion-body--main .col');
-let mainData = document.querySelector('.accordion-body--main')
-let clickedData = document.querySelectorAll('#headsetCollapse .accordion-body--clicked')
+let mainData = document.querySelectorAll('.accordion-body--main')
+let clickedData = document.querySelectorAll('.accordion-body--clicked')
 
-console.log(mainData)
 
-items.forEach((item, idx) => {
-  item.addEventListener('click', () => {
-    mainData.classList.add('d-none')
-    clickedData.forEach(item => item.classList.remove('d-none'))
+
+items.forEach((item) => {
+  item.addEventListener('click', (e) => {
+    
+    show(document.querySelector(item.getAttribute('data-show-target')))
+    hide(document.querySelector(item.getAttribute('data-hide-target')))
   })
 })
+
+// for each maindata check data target
+// the items clicked get the id = data targets clicked and remove d-none
