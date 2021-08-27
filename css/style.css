@@ -39,7 +39,7 @@
   object-fit: contain;
 }
 
-.col-5.accordion-menu {
+.accordion-menu {
   margin-top: 100px;
 }
 
@@ -111,6 +111,7 @@
 
 .accordion-body .row {
   padding-bottom: 49px;
+  --bs-gutter-x: 20px;
 }
 .accordion-body .row:first-child {
   padding-top: 49px;
@@ -118,3 +119,34 @@
 
 
 
+
+/* media queries */
+
+
+
+@media (min-width: 768px) {
+  .accordion-body .col p {
+    font-size: 12px;
+  }  
+  .accordion-body .row {
+    --bs-gutter-x: 36px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .accordion-body .col p {
+    font-size: 8px;
+  }  
+  .accordion-body .row {
+    --bs-gutter-x: 30px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .accordion-body .col p {
+    font-size: 13px;
+  }  
+  .accordion-body .row {
+    --bs-gutter-x: 40px;
+  }
+}
