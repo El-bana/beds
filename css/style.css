@@ -79,11 +79,11 @@
   box-shadow: none;
 }
 
-.accordion-body .row {
+.accordion-body {
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
 }
-.accordion-body .row::-webkit-scrollbar {
+.accordion-body::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
 }
 
@@ -103,31 +103,36 @@
   object-fit: cover;
 }
 
+.accordion-body .row {
+  width: 200%;
+  padding-top: 49px;
+  padding-bottom: 49px;
+  --bs-gutter-y: 40px;
+  --bs-gutter-x: 20px;
+}
+
+.accordion-body .col {
+  flex: 1 0 12.5%;
+  min-width: 12.5%;
+}
+
 .accordion-body .col p {
   font-size: 8px;
   margin-bottom: 0;
   margin-top: 10px;
 }
 
-.accordion-body .row {
-  padding-bottom: 49px;
-  --bs-gutter-x: 20px;
+.accordion-data {
+  margin-left: 0;
+  margin-right: 0;
 }
-.accordion-body .row:first-child {
-  padding-top: 49px;
-}
-
-
-
 
 /* media queries */
-
-
 
 @media (min-width: 768px) {
   .accordion-body .col p {
     font-size: 12px;
-  }  
+  }
   .accordion-body .row {
     --bs-gutter-x: 36px;
   }
@@ -136,7 +141,7 @@
 @media (min-width: 1280px) {
   .accordion-body .col p {
     font-size: 8px;
-  }  
+  }
   .accordion-body .row {
     --bs-gutter-x: 30px;
   }
@@ -145,7 +150,7 @@
 @media (min-width: 1920px) {
   .accordion-body .col p {
     font-size: 13px;
-  }  
+  }
   .accordion-body .row {
     --bs-gutter-x: 40px;
   }
