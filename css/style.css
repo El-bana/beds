@@ -105,11 +105,11 @@
 
 .accordion-body .row {
   width: 200%;
-  padding-top: 49px;
   padding-bottom: 49px;
   --bs-gutter-y: 40px;
   --bs-gutter-x: 20px;
 }
+
 
 .accordion-body .col {
   flex: 1 0 12.5%;
@@ -125,6 +125,10 @@
 .accordion-data {
   margin-left: 0;
   margin-right: 0;
+}
+
+.accordion-data:first-child {
+  margin-top: 0;
 }
 
 /* media queries */
