@@ -1,0 +1,52 @@
+// custom variables
+$grid-breakpoints: (
+  xs: 0,
+  sm: 390px,
+  md: 768px,
+  lg: 1280px,
+  xl: 1920px,
+);
+$container-max-widths: (
+  sm: 318px,
+  md: 608px,
+  lg: 1004px,
+  xl: 1640px,
+);
+$grid-gutter-width: 40px;
+$primary: #092746;
+$secondary: #b6925f;
+$font-family-base: "Open Sans", sans-serif;
+
+// import bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+:root {
+  --bs-body-font-family: "Open Sans", sans-serif;
+  --gutter-x: 4px;
+  @include media-breakpoint-up(md) {
+    --gutter-x: 8px;
+  }
+  @include media-breakpoint-up(lg) {
+    --gutter-x: 16px;
+  }
+  @include media-breakpoint-up(xl) {
+    --gutter-x: 40px;
+  }
+}
+
+.row {
+  --bs-gutter-x: calc(var(--gutter-x));
+}
+
+.container,
+.container-fluid,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  width: 100%;
+  padding-right: calc(var(--gutter-x) * 0.5);
+  padding-left: calc(var(--gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}

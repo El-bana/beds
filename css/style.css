@@ -1,45 +1,3 @@
-/* bootstrap variables */
-
-:root {
-  --bs-body-font-family: "Open Sans", sans-serif;
-  --bs-primary: #092746;
-  --bs-primary-rgb: 9, 39, 70;
-  --bs-secondary: #b6925f;
-  --bs-secondary-rgb: 182, 146, 95;
-  --gutter-x: 20px;
-}
-
-@media (min-width: 1400px) {
-  .container,
-  .container-lg,
-  .container-md,
-  .container-sm,
-  .container-xl,
-  .container-xxl {
-    max-width: 1640px;
-    --bs-gutter-x: var(--gutter-x);
-  }
-}
-
-@media (min-width: 1280px) {
-  :root {
-    --gutter-x: 8px;
-  }
-  .container,
-  .container-lg,
-  .container-md,
-  .container-sm,
-  .container-xl,
-  .container-xxl {
-    max-width: 1004px;
-    --bs-gutter-x: var(--gutter-x);
-  }
-}
-
-.row {
-  --bs-gutter-x: calc(var(--gutter-x) * 2);
-}
-
 /* our css */
 
 .main-btn {
@@ -146,7 +104,7 @@
 }
 
 .accordion-body .col p {
-  font-size: 13px;
+  font-size: 8px;
   margin-bottom: 0;
   margin-top: 10px;
 }
@@ -157,3 +115,6 @@
 .accordion-body .row:first-child {
   padding-top: 49px;
 }
+
+
+

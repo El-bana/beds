@@ -1,0 +1,23 @@
+{
+  "name": "beds",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/El-bana/beds.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/El-bana/beds/issues"
+  },
+  "homepage": "https://github.com/El-bana/beds#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.0",
+    "gitignore": "^0.7.0"
+  }
+}
