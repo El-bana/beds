@@ -1,7 +1,16 @@
 /* our css */
+html {
+  height: 100%;
+}
+
 
 body {
   letter-spacing: 0;
+  height: 100%;
+}
+
+.container{ 
+  height: 100%;
 }
 
 
@@ -179,6 +188,9 @@ body {
 }
 
 .buttons-row {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
   padding-top: 70px;
   --bs-gutter-y: 0;
 }
@@ -312,6 +324,11 @@ body {
 }
 
 @media (min-width: 1280px) {
+  .buttons-row {
+    position: static;
+    width: auto;
+  }
+
   .left-side-image {
     margin-top: 90px;
     padding-left: 0;
