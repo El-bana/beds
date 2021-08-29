@@ -1,5 +1,9 @@
 /* our css */
 
+body {
+  letter-spacing: 0;
+}
+
 .main-btn {
   background-color: rgba(var(--bs-secondary-rgb), 0.3);
   border: none;
@@ -67,8 +71,6 @@
   max-height: 100%;
   overflow: scroll;
 } */
-
-
 
 .accordion-item {
   margin-bottom: 10px;
@@ -170,9 +172,9 @@
 }
 
 .bottom-btn button {
-  font-size: 20px;
+  font-size: 12px;
   font-weight: bold;
-  padding: 14px;
+  padding: 9px;
   border-radius: 10px;
 }
 
@@ -187,7 +189,19 @@
 }
 
 #confirmForm .modal-dialog .modal-content .modal-body {
-  padding: 40px;
+  padding: 49px 36px;
+}
+
+#confirmForm .modal-dialog .modal-content .modal-body .form-header {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 21px;
+}
+
+#confirmForm .modal-dialog .modal-content .modal-body .form-text {
+  font-size: 14px;
+  margin: 0;
+  margin-bottom: 30px;
 }
 
 #confirmForm .modal-dialog .modal-content .modal-body form {
@@ -208,7 +222,7 @@
 
 #confirmForm .modal-dialog .modal-content .modal-body .invalid-feedback {
   text-align: right;
-  color: #FB2626;
+  color: #fb2626;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
 }
@@ -218,17 +232,26 @@
   border-radius: 10px;
 }
 
-#confirmForm .modal-dialog .modal-content .confirmButton button {
-  font-size: 14px;
-  font-weight: bold;
+#confirmForm .modal-dialog .modal-content .confirmButton {
+  flex: 0 0 50%;
+  max-width: 50%;
 }
 
-#confirmForm .was-validated .form-control:invalid, .form-control.is-invalid {
+#confirmForm .modal-dialog .modal-content .confirmButton button {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 9px 0;
+  border-radius: 10px;
+}
+
+#confirmForm .was-validated .form-control:invalid,
+.form-control.is-invalid {
   background-image: url(../assets/Path\ 35.png);
   background-size: auto;
 }
 
-#confirmForm .was-validated .form-control:valid, .form-control.is-valid {
+#confirmForm .was-validated .form-control:valid,
+.form-control.is-valid {
   background-image: url(../assets/Checkbox.png);
   background-size: auto;
 }
@@ -236,6 +259,9 @@
 /* media queries */
 
 @media (min-width: 768px) {
+  .left-side-image, .accordion-menu {
+    padding: 0;
+  }
   .accordion-body .col p {
     font-size: 12px;
   }
@@ -260,9 +286,35 @@
   .accordion-item .accordion-button {
     font-size: 16px;
   }
+  .bottom-btn button {
+    font-size: 20px;
+  }
+
+  #confirmForm .modal-dialog .modal-content .modal-body {
+    padding: 40px 78px;
+  }
+
+  #confirmForm .modal-dialog .modal-content .confirmButton {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+
+  #confirmForm .modal-dialog .modal-content .confirmButton button {
+    font-size: 14px;
+    padding: 8.5px 0;
+  }
 }
 
 @media (min-width: 1280px) {
+  .left-side-image {
+    padding-left: 0;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+  }
+  .accordion-menu {
+    padding-right: 0;
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+  }
+
   .accordion-menu {
     margin-top: 90px;
   }
@@ -297,6 +349,24 @@
   .accordion-item .accordion-button {
     font-size: 12px;
     line-height: 16px;
+  }
+
+  .bottom-btn button {
+    font-size: 12px;
+  }
+
+  #confirmForm .modal-dialog .modal-content .modal-body {
+    padding: 40px 38px;
+  }
+
+  #confirmForm .modal-dialog .modal-content .confirmButton {
+    flex: 0 0 15.5%;
+    max-width: 15.5%;
+  }
+
+  #confirmForm .modal-dialog .modal-content .confirmButton button {
+    font-size: 12px;
+    padding: 7.5px 0;
   }
 }
 
@@ -333,5 +403,20 @@
   .accordion-item .accordion-button {
     font-size: 20px;
     line-height: 27px;
+  }
+
+  .bottom-btn button {
+    font-size: 20px;
+    padding: 14px;
+  }
+
+  #confirmForm .modal-dialog .modal-content .confirmButton {
+    flex: 0 0 17%;
+    max-width: 17%;
+  }
+
+  #confirmForm .modal-dialog .modal-content .confirmButton button {
+    font-size: 14px;
+    padding: 8.5px 0;
   }
 }

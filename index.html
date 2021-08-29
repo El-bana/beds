@@ -3639,15 +3639,25 @@
           </button>
         </div>
         <div
-          class="modal fade m-0"
+          class="modal fade m-0 p-0"
           id="confirmForm"
           tabindex="-1"
           aria-labelledby="confirmForm"
           aria-hidden="true"
         >
-          <div class="modal-dialog modal-dialog-centered modal-fullscreen-md-down"> 
-            <div class="modal-content container-md">
+          <div
+            class="modal-dialog modal-dialog-centered modal-fullscreen-md-down"
+          >
+            <div class="modal-content container-md p-0">
               <div class="modal-body">
+                <h2 class="form-header">Submit Selection</h2>
+                <p class="form-text">
+                  Enter mobile phone number and email to save your selection and
+                  receive an offer from Gevorest.
+                  <br class="d-lg-block d-none" />
+                  Upon submitting a copy will be sent to your email and we will
+                  send a detailed offer to you later in the day!
+                </p>
                 <form class="row needs-validation" novalidate>
                   <div class="col-lg-6 col-12">
                     <label for="name" class="form-label">Name</label>
@@ -3695,15 +3705,17 @@
                     />
                     <div class="invalid-feedback">Something is wrong</div>
                   </div>
-                  <div class="col-2 confirmButton ms-auto">
+                  <div class="confirmButton ms-auto">
                     <button
-                    data-bs-dismiss="modal" aria-label="Close"
+                      type="reset"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
                       class="btn btn-primary w-100 text-white text-uppercase"
                     >
                       close
                     </button>
                   </div>
-                  <div class="col-2 confirmButton">
+                  <div class="confirmButton">
                     <button
                       type="submit"
                       class="btn btn-secondary w-100 text-white text-uppercase"
