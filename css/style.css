@@ -4,6 +4,7 @@ body {
   letter-spacing: 0;
 }
 
+
 .main-btn {
   background-color: rgba(var(--bs-secondary-rgb), 0.3);
   border: none;
@@ -61,6 +62,7 @@ body {
 
 .accordion-menu {
   position: relative;
+  overflow: auto;
 }
 
 /* .accordion-menu .accordion{
@@ -83,6 +85,7 @@ body {
   background-color: #d6d3ce;
   font-size: 11px;
   line-height: 15px;
+  padding: 10px 20px;
 }
 
 .accordion-button::after {
@@ -100,12 +103,12 @@ body {
 }
 
 .accordion-carousel-container,
-.accordion-menu .accordion {
+.accordion-menu {
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
 }
 .accordion-carousel-container::-webkit-scrollbar,
-.accordion-menu .accordion::-webkit-scrollbar {
+.accordion-menu::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
 }
 
@@ -167,15 +170,17 @@ body {
   margin-bottom: 11px;
 }
 
-.buttons-row {
-  padding-top: 40px;
-}
 
 .bottom-btn button {
   font-size: 12px;
   font-weight: bold;
   padding: 9px;
   border-radius: 10px;
+}
+
+.buttons-row {
+  padding-top: 70px;
+  --bs-gutter-y: 0;
 }
 
 /* modal confirm */
@@ -285,6 +290,7 @@ body {
 
   .accordion-item .accordion-button {
     font-size: 16px;
+    padding: 15px 20px;
   }
   .bottom-btn button {
     font-size: 20px;
@@ -307,18 +313,16 @@ body {
 
 @media (min-width: 1280px) {
   .left-side-image {
+    margin-top: 90px;
     padding-left: 0;
     padding-right: calc(var(--bs-gutter-x) * 0.5);
   }
   .accordion-menu {
     padding-right: 0;
     padding-left: calc(var(--bs-gutter-x) * 0.5);
-  }
-
-  .accordion-menu {
     margin-top: 90px;
-  }
 
+  }
   .max-btn {
     bottom: 20px;
     right: 20px;
@@ -349,6 +353,11 @@ body {
   .accordion-item .accordion-button {
     font-size: 12px;
     line-height: 16px;
+    padding: 10px 20px;
+  }
+
+  .buttons-row {
+    padding-top: 40px;
   }
 
   .bottom-btn button {
@@ -371,10 +380,6 @@ body {
 }
 
 @media (min-width: 1920px) {
-  .left-side-image {
-    margin-top: 90px;
-  }
-
   .accordion-menu {
     margin-top: 100px;
   }
@@ -403,6 +408,7 @@ body {
   .accordion-item .accordion-button {
     font-size: 20px;
     line-height: 27px;
+    padding: 16.5px 20px;
   }
 
   .bottom-btn button {
