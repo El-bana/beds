@@ -22,11 +22,8 @@ $font-family-base: "Open Sans", sans-serif;
 
 :root {
   --bs-body-font-family: "Open Sans", sans-serif;
-  --gutter-x: 4px;
+  --gutter-x: 10px;
   @include media-breakpoint-up(md) {
-    --gutter-x: 8px;
-  }
-  @include media-breakpoint-up(lg) {
     --gutter-x: 16px;
   }
   @include media-breakpoint-up(xl) {
@@ -36,6 +33,21 @@ $font-family-base: "Open Sans", sans-serif;
 
 .row {
   --bs-gutter-x: calc(var(--gutter-x));
+  --bs-gutter-y: 20px;
+  @include media-breakpoint-up(md) {
+    --bs-gutter-y: 30px;
+
+  }
+}
+
+#confirmForm .modal-dialog .modal-content .modal-body form.row {
+  --bs-gutter-x: var(--gutter-x);
+  @include media-breakpoint-up(lg) {
+    --bs-gutter-x: 36px;
+  }
+  @include media-breakpoint-up(xl) {
+    --bs-gutter-x: var(--gutter-x);
+  }
 }
 
 .container,

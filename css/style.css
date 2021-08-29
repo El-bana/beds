@@ -48,16 +48,27 @@
   object-fit: contain;
 }
 
-.accordion-menu {
-  margin-top: 100px;
-}
-
 .modal.fade .modal-dialog {
   transition: none;
   transform: none;
 }
 
 /* accordion */
+
+.accordion-menu {
+  position: relative;
+}
+
+/* .accordion-menu .accordion{
+  position: absolute;
+  right: 0;
+  width: 100%;
+  padding: inherit;
+  max-height: 100%;
+  overflow: scroll;
+} */
+
+
 
 .accordion-item {
   margin-bottom: 10px;
@@ -69,6 +80,7 @@
   border-radius: 0.5rem !important;
   background-color: #d6d3ce;
   font-size: 11px;
+  line-height: 15px;
 }
 
 .accordion-button::after {
@@ -85,16 +97,18 @@
   box-shadow: none;
 }
 
-.accordion-carousel-container {
+.accordion-carousel-container,
+.accordion-menu .accordion {
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
 }
-.accordion-carousel-container::-webkit-scrollbar {
+.accordion-carousel-container::-webkit-scrollbar,
+.accordion-menu .accordion::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
 }
 
 .accordion-body {
-  padding:0;
+  padding: 0;
   padding-top: 49px;
 }
 
@@ -105,6 +119,7 @@
   background: white;
   position: relative;
 }
+
 .accordion-body .col .img-container img {
   position: absolute;
   top: 0;
@@ -121,16 +136,19 @@
 
 .accordion-body .accordion-data {
   width: calc(8 / 3 * 100%);
+  padding: 0;
   padding-bottom: 49px;
   --bs-gutter-y: 40px;
   --bs-gutter-x: 20px;
 }
 
+.accordion-carousel-container {
+  padding: 0 8px;
+}
 
 .accordion-body .col {
   flex: 1 0 12.5%;
   max-width: 12.5%;
-
 }
 
 .accordion-body .col p {
@@ -147,6 +165,73 @@
   margin-bottom: 11px;
 }
 
+.buttons-row {
+  padding-top: 40px;
+}
+
+.bottom-btn button {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 14px;
+  border-radius: 10px;
+}
+
+/* modal confirm */
+
+#confirmForm .modal-dialog {
+  max-width: 880px;
+}
+
+#confirmForm .modal-dialog .modal-content {
+  border: none;
+}
+
+#confirmForm .modal-dialog .modal-content .modal-body {
+  padding: 40px;
+}
+
+#confirmForm .modal-dialog .modal-content .modal-body form {
+  color: var(--bs-primary);
+}
+
+#confirmForm .modal-dialog .modal-content .modal-body .form-label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+#confirmForm .modal-dialog .modal-content .modal-body .form-control {
+  border: 2px solid var(--bs-primary);
+  border-radius: 10px;
+  padding: 12.5px 21px;
+  font-size: 14px;
+}
+
+#confirmForm .modal-dialog .modal-content .modal-body .invalid-feedback {
+  text-align: right;
+  color: #FB2626;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+#confirmForm .modal-dialog .modal-content .confirmButton {
+  margin-top: 60px;
+  border-radius: 10px;
+}
+
+#confirmForm .modal-dialog .modal-content .confirmButton button {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#confirmForm .was-validated .form-control:invalid, .form-control.is-invalid {
+  background-image: url(../assets/Path\ 35.png);
+  background-size: auto;
+}
+
+#confirmForm .was-validated .form-control:valid, .form-control.is-valid {
+  background-image: url(../assets/Checkbox.png);
+  background-size: auto;
+}
 
 /* media queries */
 
@@ -162,6 +247,10 @@
     --bs-gutter-x: 36px;
   }
 
+  .accordion-carousel-container {
+    padding: 0;
+  }
+
   .accordion-row-header {
     font-size: 16px;
     margin-left: 18px;
@@ -171,13 +260,23 @@
   .accordion-item .accordion-button {
     font-size: 16px;
   }
-  
 }
 
 @media (min-width: 1280px) {
+  .accordion-menu {
+    margin-top: 90px;
+  }
+
   .max-btn {
     bottom: 20px;
     right: 20px;
+  }
+
+  .accordion-body {
+    padding-top: 22px;
+  }
+  .accordion-carousel-container {
+    padding: 0 5px;
   }
   .accordion-body .col p {
     font-size: 8px;
@@ -197,10 +296,25 @@
 
   .accordion-item .accordion-button {
     font-size: 12px;
+    line-height: 16px;
   }
 }
 
 @media (min-width: 1920px) {
+  .left-side-image {
+    margin-top: 90px;
+  }
+
+  .accordion-menu {
+    margin-top: 100px;
+  }
+
+  .accordion-body {
+    padding-top: 49px;
+  }
+  .accordion-carousel-container {
+    padding: 0 10px;
+  }
   .accordion-body .col p {
     font-size: 13px;
   }
@@ -218,5 +332,6 @@
 
   .accordion-item .accordion-button {
     font-size: 20px;
+    line-height: 27px;
   }
 }
